@@ -23,5 +23,8 @@ class LoggedInUserCanLogoutTest < ActionDispatch::IntegrationTest
 
     assert page.has_content?("Login")
     refute page.has_content?("Logout")
+
+    # if we were to just stub this out, we're not really testing the piece that we care about
+    
   end
 end
